@@ -40,27 +40,6 @@ Installs [psql](https://www.postgresql.org/docs/current/app-psql.html), the Post
 
 ---
 
-### `starship`
-
-Installs the [Starship](https://starship.rs) cross-shell prompt.
-
-```jsonc
-{
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-        "ghcr.io/devcontainers-features/tools/starship:1": {}
-    }
-}
-```
-
-#### Options
-
-| Option | Type | Default | Description |
-|---|---|---|---|
-| `version` | string | `latest` | Select the version to install |
-
----
-
 ### `gum`
 
 Installs [Gum](https://github.com/charmbracelet/gum) — a tool for glamorous shell scripts with interactive TUI components.
@@ -84,7 +63,7 @@ Installs [Gum](https://github.com/charmbracelet/gum) — a tool for glamorous sh
 
 ### `nvim`
 
-Installs [Neovim](https://neovim.io) with fd, ripgrep, and language providers.
+Installs [Neovim](https://neovim.io) with fd, ripgrep, and language providers. Adds Mason's bin directory (`~/.local/share/nvim/mason/bin`) to `PATH` for all shell types.
 
 ```jsonc
 {
@@ -111,11 +90,6 @@ Installs [Neovim](https://neovim.io) with fd, ripgrep, and language providers.
 │   ├── psql
 │   │   ├── devcontainer-feature.json
 │   │   └── install.sh
-│   ├── starship
-│   │   ├── devcontainer-feature.json
-│   │   ├── install.sh
-│   │   └── scripts
-│   │       └── profile.sh
 │   ├── gum
 │   │   ├── devcontainer-feature.json
 │   │   └── install.sh
