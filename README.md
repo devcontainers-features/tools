@@ -1,5 +1,8 @@
 # Dev Container Features: Tools
 
+[![Release](https://img.shields.io/github/v/release/devcontainers-features/tools)](https://github.com/devcontainers-features/tools/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A collection of [dev container Features](https://containers.dev/implementors/features/) for developer tools, published to GitHub Container Registry.
 
 ## Features
