@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/devcontainers-features/tools/compare/gum-v1.2.0...gum-v1.2.1) (2026-03-09)
+
+
+### Bug Fixes
+
+* consistent apt cleanup, drop starship test, add Mason PATH check to nvim test ([143bd74](https://github.com/devcontainers-features/tools/commit/143bd74d937fad5125e31c9de431ca9380511621))
+
 ## [1.2.0](https://github.com/devcontainers-features/tui/compare/gum-v1.1.0...gum-v1.2.0) (2026-03-09)
 
 
