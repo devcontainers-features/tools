@@ -1,0 +1,20 @@
+{
+    "id": "gum",
+    "name": "Gum",
+    "version": "1.2.0",
+    "description": "A tool for glamorous shell scripts with interactive TUI components.",
+    "documentationURL": "https://github.com/devcontainers-features/tools/tree/main/src/gum",
+    "options": {
+        "version": {
+            "description": "Select the version to install.",
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

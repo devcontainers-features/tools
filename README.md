@@ -1,6 +1,6 @@
-# Dev Container Features: CLI
+# Dev Container Features: Tools
 
-A collection of [dev container Features](https://containers.dev/implementors/features/) for CLI tools, published to GitHub Container Registry.
+A collection of [dev container Features](https://containers.dev/implementors/features/) for developer tools, published to GitHub Container Registry.
 
 ## Features
 
@@ -12,7 +12,7 @@ Installs the [Atlas CLI](https://atlasgo.io) for managing database schemas as co
 {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-        "ghcr.io/devcontainers-features/cli/atlas:1": {}
+        "ghcr.io/devcontainers-features/tools/atlas:1": {}
     }
 }
 ```
@@ -33,10 +33,73 @@ Installs [psql](https://www.postgresql.org/docs/current/app-psql.html), the Post
 {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-        "ghcr.io/devcontainers-features/cli/psql:1": {}
+        "ghcr.io/devcontainers-features/tools/psql:1": {}
     }
 }
 ```
+
+---
+
+### `starship`
+
+Installs the [Starship](https://starship.rs) cross-shell prompt.
+
+```jsonc
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers-features/tools/starship:1": {}
+    }
+}
+```
+
+#### Options
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `version` | string | `latest` | Select the version to install |
+
+---
+
+### `gum`
+
+Installs [Gum](https://github.com/charmbracelet/gum) — a tool for glamorous shell scripts with interactive TUI components.
+
+```jsonc
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers-features/tools/gum:1": {}
+    }
+}
+```
+
+#### Options
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `version` | string | `latest` | Select the version to install |
+
+---
+
+### `nvim`
+
+Installs [Neovim](https://neovim.io) with fd, ripgrep, and language providers.
+
+```jsonc
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers-features/tools/nvim:1": {}
+    }
+}
+```
+
+#### Options
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `version` | string | `latest` | Select the version to install |
 
 ## Repository Structure
 
@@ -45,12 +108,18 @@ Installs [psql](https://www.postgresql.org/docs/current/app-psql.html), the Post
 │   ├── atlas
 │   │   ├── devcontainer-feature.json
 │   │   └── install.sh
-│   └── psql
+│   ├── psql
+│   │   ├── devcontainer-feature.json
+│   │   └── install.sh
+│   ├── starship
+│   │   ├── devcontainer-feature.json
+│   │   ├── install.sh
+│   │   └── scripts
+│   │       └── profile.sh
+│   ├── gum
+│   │   ├── devcontainer-feature.json
+│   │   └── install.sh
+│   └── nvim
 │       ├── devcontainer-feature.json
 │       └── install.sh
 ```
-
-## Related
-
-- [`devcontainers-features/ai`](https://github.com/devcontainers-features/ai) — dev container features for AI coding tools
-- [`devcontainers-features/tui`](https://github.com/devcontainers-features/tui) — dev container features for TUI tools
