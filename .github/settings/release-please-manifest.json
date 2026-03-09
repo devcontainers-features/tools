@@ -2,6 +2,5 @@
   ".": "0.2.0",
   "src/atlas": "1.1.0",
   "src/starship": "1.1.0",
-  "src/psql": "1.1.0",
-  "src/nvim": "1.0.0"
+  "src/psql": "1.1.0"
 }
