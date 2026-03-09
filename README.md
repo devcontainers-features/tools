@@ -38,27 +38,6 @@ Installs [psql](https://www.postgresql.org/docs/current/app-psql.html), the Post
 }
 ```
 
----
-
-### `starship`
-
-Installs the [Starship](https://starship.rs) cross-shell prompt.
-
-```jsonc
-{
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-        "ghcr.io/devcontainers-features/cli/starship:1": {}
-    }
-}
-```
-
-#### Options
-
-| Option | Type | Default | Description |
-|---|---|---|---|
-| `version` | string | `latest` | Select the version to install |
-
 ## Repository Structure
 
 ```
@@ -66,14 +45,9 @@ Installs the [Starship](https://starship.rs) cross-shell prompt.
 │   ├── atlas
 │   │   ├── devcontainer-feature.json
 │   │   └── install.sh
-│   ├── psql
-│   │   ├── devcontainer-feature.json
-│   │   └── install.sh
-│   └── starship
+│   └── psql
 │       ├── devcontainer-feature.json
-│       ├── install.sh
-│       └── scripts
-│           └── profile.sh
+│       └── install.sh
 ```
 
 ## Related

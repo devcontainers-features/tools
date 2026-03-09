@@ -14,7 +14,6 @@ jobs:
       - name: "Check shell script syntax"
         run: |
           bash -n src/atlas/install.sh
-          bash -n src/starship/install.sh
           bash -n src/psql/install.sh
 
   test:
@@ -27,9 +26,6 @@ jobs:
 
       - name: "Test atlas feature"
         run: devcontainer features test -f atlas -i mcr.microsoft.com/devcontainers/base:ubuntu .
-
-      - name: "Test starship feature"
-        run: devcontainer features test -f starship -i mcr.microsoft.com/devcontainers/base:ubuntu .
 
       - name: "Test psql feature"
         run: devcontainer features test -f psql -i mcr.microsoft.com/devcontainers/base:ubuntu .
