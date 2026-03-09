@@ -15,7 +15,6 @@ jobs:
         run: |
           bash -n src/atlas/install.sh
           bash -n src/psql/install.sh
-          bash -n src/starship/install.sh
           bash -n src/gum/install.sh
           bash -n src/nvim/install.sh
 
@@ -32,9 +31,6 @@ jobs:
 
       - name: "Test psql feature"
         run: devcontainer features test -f psql -i mcr.microsoft.com/devcontainers/base:ubuntu .
-
-      - name: "Test starship feature"
-        run: devcontainer features test -f starship -i mcr.microsoft.com/devcontainers/base:ubuntu .
 
       - name: "Test gum feature"
         run: devcontainer features test -f gum -i mcr.microsoft.com/devcontainers/base:ubuntu .

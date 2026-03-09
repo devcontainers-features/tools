@@ -33,19 +33,6 @@
         }
       ]
     },
-    "src/starship": {
-      "release-type": "simple",
-      "package-name": "starship",
-      "changelog-path": "CHANGELOG.md",
-      "skip-github-release": true,
-      "extra-files": [
-        {
-          "type": "json",
-          "path": "devcontainer-feature.json",
-          "jsonpath": "$.version"
-        }
-      ]
-    },
     "src/gum": {
       "release-type": "simple",
       "package-name": "gum",
