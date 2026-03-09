@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/devcontainers-features/cli/compare/psql-v1.2.0...psql-v1.3.0) (2026-03-09)
+
+
+### Features
+
+* **psql:** add PostgreSQL client feature ([00423d2](https://github.com/devcontainers-features/cli/commit/00423d2bbc7f0f6db6509d9c4cf165c4cdb1067c))
+
 ## [1.2.0](https://github.com/devcontainers-features/cli/compare/psql-v1.1.0...psql-v1.2.0) (2026-03-09)
 
 

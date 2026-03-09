@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/devcontainers-features/cli/compare/v0.3.0...v0.3.1) (2026-03-09)
+
+
+### Bug Fixes
+
+* **ci:** push docs directly to main with skip ci to prevent release loop ([92c2a45](https://github.com/devcontainers-features/cli/commit/92c2a4567286559908f4d43b7e27dbb165c82ba9))
+
 ## [0.3.0](https://github.com/devcontainers-features/cli/compare/v0.2.0...v0.3.0) (2026-03-09)
 
 
