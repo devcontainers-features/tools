@@ -1,7 +1,7 @@
 {
     "id": "atlas",
     "name": "Atlas CLI",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Manage your database schema as code.",
     "documentationURL": "https://github.com/devcontainers-features/cli/tree/main/src/atlas",
     "options": {
