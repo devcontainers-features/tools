@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/devcontainers-features/tools/compare/gum-v1.2.1...gum-v1.3.0) (2026-03-09)
+
+
+### Features
+
+* add gum and nvim features, align CI ([6660266](https://github.com/devcontainers-features/tools/commit/6660266ce2f824d0251faf16a9aaa900dcfce5e1))
+
 ## [1.2.1](https://github.com/devcontainers-features/tools/compare/gum-v1.2.0...gum-v1.2.1) (2026-03-09)
 
 

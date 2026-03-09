@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.5.0](https://github.com/devcontainers-features/tools/compare/v0.4.0...v0.5.0) (2026-03-09)
+
+
+### Features
+
+* add gum and nvim features, align CI ([6660266](https://github.com/devcontainers-features/tools/commit/6660266ce2f824d0251faf16a9aaa900dcfce5e1))
+* initial tools repository with atlas and starship features ([699acf1](https://github.com/devcontainers-features/tools/commit/699acf135644705dbedb2e84aaab33432bd675ed))
+* **nvim:** add Neovim feature with fd, ripgrep and language providers ([72283f1](https://github.com/devcontainers-features/tools/commit/72283f1ffd2075c3d223441cb61d662873b7249c))
+* **psql:** add PostgreSQL client feature ([00423d2](https://github.com/devcontainers-features/tools/commit/00423d2bbc7f0f6db6509d9c4cf165c4cdb1067c))
+
+
+### Bug Fixes
+
+* **ci:** push docs directly to main with skip ci to prevent release loop ([92c2a45](https://github.com/devcontainers-features/tools/commit/92c2a4567286559908f4d43b7e27dbb165c82ba9))
+* consistent apt cleanup and Mason PATH for all shells ([4919f21](https://github.com/devcontainers-features/tools/commit/4919f214983ef68f65ef70e037c139f029ab1ae1))
+* **nvim:** export mason bin directory to PATH ([c31055f](https://github.com/devcontainers-features/tools/commit/c31055f6f7cbe86449e66a95e37084cb95cef0ca))
+
 ## [0.4.0](https://github.com/devcontainers-features/tools/compare/v0.3.1...v0.4.0) (2026-03-09)
 
 
