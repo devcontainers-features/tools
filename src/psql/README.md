@@ -7,7 +7,7 @@ Installs psql, the PostgreSQL interactive terminal.
 
 ```json
 "features": {
-    "ghcr.io/devcontainers-features/cli/psql:1": {}
+    "ghcr.io/devcontainers-features/tools/psql:1": {}
 }
 ```
 
@@ -21,4 +21,4 @@ Installs psql, the PostgreSQL interactive terminal.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainers-features/cli/blob/main/src/psql/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainers-features/tools/blob/main/src/psql/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
