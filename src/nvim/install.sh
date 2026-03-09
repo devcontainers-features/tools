@@ -1,23 +1,18 @@
 #!/bin/sh
 set -e
 
-apt_get_update() {
-  if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
-    echo "Running apt-get update..."
-    apt-get update -y
-  fi
-}
-
 # Checks if packages are installed and installs them if not
 apt_get() {
   if ! dpkg -s "$@" >/dev/null 2>&1; then
+    apt-get update -y
     apt-get -y install --no-install-recommends "$@"
+    rm -rf /var/lib/apt/lists/*
   fi
 }
 
-apt_get_update
-apt_get ca-certificates
-apt_get curl
+apt_get ca-certificates curl
+# fd-find is the Debian/Ubuntu rename of fd; ripgrep provides rg
+apt_get fd-find ripgrep
 
 # Detect architecture
 ARCH=$(uname -m)
@@ -49,12 +44,7 @@ tar -C /opt -xzf /tmp/nvim-linux.tar.gz
 mv /opt/nvim-linux-${ARCH_SUFFIX} /opt/nvim
 rm /tmp/nvim-linux.tar.gz
 
-# Make nvim available for everybody
 ln -sf /opt/nvim/bin/nvim /usr/local/bin/nvim
-
-# Install fd and ripgrep
-echo "Installing fd and ripgrep..."
-apt_get fd-find ripgrep
 ln -sf "$(which fdfind)" /usr/local/bin/fd
 
 # Install neovim node package if npm is available
@@ -72,9 +62,19 @@ elif command -v pip > /dev/null 2>&1; then
   pip install pynvim 2>/dev/null || pip install --break-system-packages pynvim || true
 fi
 
-# Export Mason bin directory to PATH for all users
-cat > /etc/profile.d/nvim-mason.sh << 'EOF'
+# Add Mason bin to PATH for all users.
+# Written to both profile.d (login shells) and bashrc/zshrc (interactive
+# non-login shells, which is the default in VS Code / devcontainer terminals).
+MASON_PATH_SNIPPET='export PATH="${HOME}/.local/share/nvim/mason/bin:${PATH}"'
+
+cat > /etc/profile.d/nvim-mason.sh << EOF
 #!/bin/sh
-# Add Mason binaries to PATH
-export PATH="${HOME}/.local/share/nvim/mason/bin:${PATH}"
+${MASON_PATH_SNIPPET}
 EOF
+chmod +x /etc/profile.d/nvim-mason.sh
+
+for rc in /etc/bash.bashrc /etc/zsh/zshrc; do
+  if [ -f "$rc" ]; then
+    echo "${MASON_PATH_SNIPPET}" >> "$rc"
+  fi
+done
