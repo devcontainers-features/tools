@@ -16,6 +16,8 @@ jobs:
           bash -n src/atlas/install.sh
           bash -n src/starship/install.sh
           bash -n src/psql/install.sh
+          bash -n src/nvim/install.sh
+          bash -n src/nvim/install.sh
 
   test:
     runs-on: ubuntu-latest
@@ -33,3 +35,9 @@ jobs:
 
       - name: "Test psql feature"
         run: devcontainer features test -f psql -i mcr.microsoft.com/devcontainers/base:ubuntu .
+
+      - name: "Test nvim feature"
+        run: devcontainer features test -f nvim -i mcr.microsoft.com/devcontainers/base:ubuntu .
+
+      - name: "Test nvim feature"
+        run: devcontainer features test -f nvim -i mcr.microsoft.com/devcontainers/base:ubuntu .

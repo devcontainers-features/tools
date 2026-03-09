@@ -46,6 +46,27 @@ Installs the [Starship](https://starship.rs) cross-shell prompt.
 
 ---
 
+### `nvim`
+
+Installs [Neovim](https://neovim.io) with fd, ripgrep, and language providers.
+
+```jsonc
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers-features/tools/nvim:1": {}
+    }
+}
+```
+
+#### Options
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `version` | string | `latest` | Select the version to install |
+
+---
+
 ### `psql`
 
 Installs [psql](https://www.postgresql.org/docs/current/app-psql.html), the PostgreSQL interactive terminal.
@@ -64,6 +85,9 @@ Installs [psql](https://www.postgresql.org/docs/current/app-psql.html), the Post
 ```
 ├── src
 │   ├── atlas
+│   │   ├── devcontainer-feature.json
+│   │   └── install.sh
+│   ├── nvim
 │   │   ├── devcontainer-feature.json
 │   │   └── install.sh
 │   ├── psql
