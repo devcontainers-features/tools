@@ -1,4 +1,4 @@
-# Dev Container Features: Tools
+# devcontainers-features/tools
 
 > One line in `devcontainer.json`. Your tools, ready to go.
 
