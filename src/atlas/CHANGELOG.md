@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/devcontainers-features/tools/compare/atlas-v1.3.0...atlas-v1.4.0) (2026-03-09)
+
+
+### Features
+
+* initial tools repository with atlas and starship features ([699acf1](https://github.com/devcontainers-features/tools/commit/699acf135644705dbedb2e84aaab33432bd675ed))
+
+
+### Bug Fixes
+
+* consistent apt cleanup, drop starship test, add Mason PATH check to nvim test ([143bd74](https://github.com/devcontainers-features/tools/commit/143bd74d937fad5125e31c9de431ca9380511621))
+
 ## [1.3.0](https://github.com/devcontainers-features/cli/compare/atlas-v1.2.0...atlas-v1.3.0) (2026-03-09)
 
 
