@@ -7,7 +7,7 @@ Manage your database schema as code.
 
 ```json
 "features": {
-    "ghcr.io/devcontainers-features/cli/atlas:1": {}
+    "ghcr.io/devcontainers-features/tools/atlas:1": {}
 }
 ```
 
@@ -21,4 +21,4 @@ Manage your database schema as code.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainers-features/cli/blob/main/src/atlas/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainers-features/tools/blob/main/src/atlas/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
