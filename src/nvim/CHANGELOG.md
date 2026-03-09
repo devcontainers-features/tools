@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://github.com/devcontainers-features/tools/compare/nvim-v1.2.0...nvim-v1.3.0) (2026-03-09)
+
+
+### Features
+
+* **nvim:** add Neovim feature with fd, ripgrep and language providers ([72283f1](https://github.com/devcontainers-features/tools/commit/72283f1ffd2075c3d223441cb61d662873b7249c))
+
+
+### Bug Fixes
+
+* **nvim:** add Mason bin to PATH for all shell types, clean apt lists ([164dc26](https://github.com/devcontainers-features/tools/commit/164dc269b8878b5100bc4ad7ddcad530de0dd08e))
+* **nvim:** export mason bin directory to PATH ([c31055f](https://github.com/devcontainers-features/tools/commit/c31055f6f7cbe86449e66a95e37084cb95cef0ca))
+
 ## [1.2.0](https://github.com/devcontainers-features/tui/compare/nvim-v1.1.0...nvim-v1.2.0) (2026-03-09)
 
 
