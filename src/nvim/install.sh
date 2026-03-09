@@ -71,3 +71,10 @@ elif command -v pip > /dev/null 2>&1; then
   echo "Installing pynvim..."
   pip install pynvim 2>/dev/null || pip install --break-system-packages pynvim || true
 fi
+
+# Export Mason bin directory to PATH for all users
+cat > /etc/profile.d/nvim-mason.sh << 'EOF'
+#!/bin/sh
+# Add Mason binaries to PATH
+export PATH="${HOME}/.local/share/nvim/mason/bin:${PATH}"
+EOF
