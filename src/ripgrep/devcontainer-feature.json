@@ -1,0 +1,6 @@
+{
+    "name": "ripgrep",
+    "id": "ripgrep",
+    "version": "1.0.0",
+    "description": "Installs ripgrep (rg), a fast line-oriented search tool"
+}

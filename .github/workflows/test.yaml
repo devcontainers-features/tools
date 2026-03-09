@@ -1,0 +1,31 @@
+name: "CI - Test Features"
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: "Check shell script syntax"
+        run: |
+          bash -n src/atlas/install.sh
+          bash -n src/starship/install.sh
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: "Install latest devcontainer CLI"
+        run: npm install -g @devcontainers/cli
+
+      - name: "Test atlas feature"
+        run: devcontainer features test -f atlas -i mcr.microsoft.com/devcontainers/base:ubuntu .
+
+      - name: "Test starship feature"
+        run: devcontainer features test -f starship -i mcr.microsoft.com/devcontainers/base:ubuntu .
