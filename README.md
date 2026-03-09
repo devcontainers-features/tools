@@ -1,9 +1,11 @@
 # Dev Container Features: Tools
 
+> One line in `devcontainer.json`. Your tools, ready to go.
+
 [![Release](https://img.shields.io/github/v/release/devcontainers-features/tools)](https://github.com/devcontainers-features/tools/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A collection of [dev container Features](https://containers.dev/implementors/features/) for developer tools, published to GitHub Container Registry.
+Stop configuring developer tools by hand in every container. Drop a feature reference into your `devcontainer.json` and get a consistent, reproducible environment — locally, in Codespaces, and in CI.
 
 ## Features
 
@@ -100,3 +102,7 @@ Installs [Neovim](https://neovim.io) with fd, ripgrep, and language providers. A
 │       ├── devcontainer-feature.json
 │       └── install.sh
 ```
+
+## License
+
+MIT — use it, fork it, extend it.
